@@ -6,6 +6,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, '/images'
 
+activate :syntax, :line_numbers => true
+
 activate :directory_indexes
 
 activate :blog do |blog|

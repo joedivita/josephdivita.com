@@ -24,3 +24,5 @@ gem 'middleman-blog'
 gem "middleman-minify-html"
 
 gem 'middleman-s3_redirect'
+
+gem 'middleman-syntax'

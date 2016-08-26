@@ -20,3 +20,5 @@
 .env
 .env.production
 .s3_sync
+
+.git

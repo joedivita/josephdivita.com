@@ -1,4 +1,4 @@
-S3_BUCKET = ''
+S3_BUCKET = 'josephdivita.com'
 
 set :css_dir, 'stylesheets'
 

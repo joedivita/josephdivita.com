@@ -1,7 +1,7 @@
 $count: 12;
-$speed: 2s;
+$speed: 1s;
 $font-size: 31px;
-$space: 0.0625em;
+$space: 0.08em;
 $letter-width: calc(1ch + #{$space});
 $blink-time: $count;
 $font-width: calc(#{$count}ch + #{$count}*#{$space});

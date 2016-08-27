@@ -1,0 +1,167 @@
+
+$count: 12;
+$speed: 2s;
+$font-size: 31px;
+$space: 0.0625em;
+$letter-size: calc(1ch + #{$space});
+$blink-time: $count;
+$font-width: calc(#{$count}ch + #{$count}*#{$space});
+
+.typeable {
+	h1 {
+		position: relative;
+    font-family: 'Inconsolata', monospace;
+    white-space: nowrap;
+    width: $font-width;
+		letter-spacing: $space;
+
+	    &:after {
+      background: #fff;
+      border-left: 2px solid #000;
+      left: 0;
+			top: 0;
+      height: 2ex;
+			display: block;
+			position: absolute;
+			content: '';
+			width: $font-width;
+			animation: 1s blink $blink-time, move $speed 1.5s forwards steps(1), 1s blink infinite;
+      -webkit-animation: 1s blink $blink-time, move $speed 1.5s forwards steps(1), 1s blink infinite;
+      -moz-animation: 1s blink $blink-time, move $speed 1.5s forwards steps(1), 1s blink infinite;
+      -ms-animation: 1s blink $blink-time, move $speed 1.5s forwards steps(1), 1s blink infinite;
+      -o-animation: 1s blink $blink-time, move $speed 1.5s forwards steps(1), 1s blink infinite;
+  	}
+	}
+}
+
+// Keyframes for typing animation
+
+@keyframes move {
+  @for $i from 1 through $count {
+    $prog: 100/$count;
+    $percent: $i*$prog;
+    #{$percent}% {
+      width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$space}));
+      left: calc(#{$i}ch + #{$i}*#{$space});
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+      border-left-color: #000;
+  }
+  50% {
+      border-left-color: #000;
+  }
+  51% {
+      border-left-color: #fff;
+  }
+  100% {
+      border-left-color: #fff;
+  }
+}
+
+@-webkit-keyframes move {
+  @for $i from 1 through $count {
+    $prog: 100/$count;
+    $percent: $i*$prog;
+    #{$percent}% {
+      width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$space}));
+      left: calc(#{$i}ch + #{$i}*#{$space});
+    }
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+      border-left-color: #000;
+  }
+  50% {
+      border-left-color: #000;
+  }
+  51% {
+      border-left-color: #fff;
+  }
+  100% {
+      border-left-color: #fff;
+  }
+}
+
+@-moz-keyframes move {
+  @for $i from 1 through $count {
+    $prog: 100/$count;
+    $percent: $i*$prog;
+    #{$percent}% {
+      width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$space}));
+      left: calc(#{$i}ch + #{$i}*#{$space});
+    }
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+      border-left-color: #000;
+  }
+  50% {
+      border-left-color: #000;
+  }
+  51% {
+      border-left-color: #fff;
+  }
+  100% {
+      border-left-color: #fff;
+  }
+}
+
+@-ms-keyframes move {
+  @for $i from 1 through $count {
+    $prog: 100/$count;
+    $percent: $i*$prog;
+    #{$percent}% {
+      width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$space}));
+      left: calc(#{$i}ch + #{$i}*#{$space});
+    }
+  }
+}
+
+@-ms-keyframes blink {
+  0% {
+      border-left-color: #000;
+  }
+  50% {
+      border-left-color: #000;
+  }
+  51% {
+      border-left-color: #fff;
+  }
+  100% {
+      border-left-color: #fff;
+  }
+}
+
+@-o-keyframes move {
+  @for $i from 1 through $count {
+    $prog: 100/$count;
+    $percent: $i*$prog;
+    #{$percent}% {
+      width: calc(#{$font-width} - (#{$i}ch + #{$i}*#{$space}));
+      left: calc(#{$i}ch + #{$i}*#{$space});
+    }
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+      border-left-color: #000;
+  }
+  50% {
+      border-left-color: #000;
+  }
+  51% {
+      border-left-color: #fff;
+  }
+  100% {
+      border-left-color: #fff;
+  }
+}
